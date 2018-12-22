@@ -1,16 +1,25 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
+<<<<<<< HEAD
 import home from '@/components/Home.vue'
 import about from '@/components/about.vue'
 
 import document from '@/components/document'
 import noFound from '@/components/404'
+=======
+import Home from '@/components/Home.vue'
+import about from '@/components/about.vue'
+
+import document from '@/components/document'
+
+>>>>>>> 8989582c40f30a8cda0dc5765182fd86b5713c4b
 let router = new VueRouter({
   mode: 'history',
   linkActiveClass:'is-active',
   routes: [{
       path: '/home',
+<<<<<<< HEAD
       name:'Home', //取的name名字
       component: home,
       alias:'/index' //别名
@@ -18,10 +27,17 @@ let router = new VueRouter({
     {
       path: "/about",
       name:'About',
+=======
+      component: Home
+    },
+    {
+      path: "/about",
+>>>>>>> 8989582c40f30a8cda0dc5765182fd86b5713c4b
       component: about
     },
     {
       path: "/document",
+<<<<<<< HEAD
       name:'Document',
       component: document
     },
@@ -44,6 +60,9 @@ let router = new VueRouter({
 
         // return '/home'
       }
+=======
+      component: document
+>>>>>>> 8989582c40f30a8cda0dc5765182fd86b5713c4b
     }
   ]
 })
