@@ -6,7 +6,7 @@
           to="/" 
           tag="li" 
           event="mouseover"
-          exact="true"
+          exact
         >
           <i class="fa fa-home"></i>
           <span>home</span>
@@ -31,6 +31,10 @@
         </router-link>
       </ul>
     </div>
+
+    <router-view name="slider"></router-view>
+
+
     <router-view class="center"></router-view>
   </div>
 </template>

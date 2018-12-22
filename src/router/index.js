@@ -10,7 +10,7 @@ import noFound from '@/components/404'
 import study from '@/view/study'
 import work from '@/view/work'
 import hobby from '@/view/hobby'
-
+import slider from '@/view/slider'
 
 let router = new VueRouter({
   mode: 'history',
@@ -28,19 +28,22 @@ let router = new VueRouter({
     },
     {
       path: "/about",
-      name:'About',
+      // name:'About',
       component: about,
       children:[
         {
-          path:'study',
+          path:'',//默认的子路由 /about     空字符串
+          name:'About',
           component:study
         },
         {
-          path:'work',
+          path:'/work',  //  /work
+          name:'Work',
           component:work
         },
         {
-          path:'hobby',
+          path:'/hobby',// /hobby
+          name:'Hobby',
           component:hobby
         }
       ]
@@ -48,7 +51,10 @@ let router = new VueRouter({
     {
       path: "/document",
       name:'Document',
-      component: document
+      components:{
+        default:document,
+        slider:slider
+      }
     },
     {
       path:"*",
