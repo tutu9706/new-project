@@ -2,7 +2,12 @@
   <div id="app">
     <div class="nav-box">
       <ul class="nav">
-        <router-link :to="index" tag="li" event="mouseover">
+        <router-link 
+          to="/" 
+          tag="li" 
+          event="mouseover"
+          exact="true"
+        >
           <i class="fa fa-home"></i>
           <span>home</span>
         </router-link>
@@ -10,7 +15,6 @@
         <router-link 
           :to="{path:'/about'}" 
           active-class="activeClass" 
-          event="mouseover"
           tag="li"  
         >
           <i></i>
@@ -21,7 +25,7 @@
           to="/document" 
           tag="li"
           active-class="activeClass" 
-          event="mouseover">
+        >
           <i></i>
           <span>document</span>
         </router-link>

@@ -6,10 +6,21 @@ import about from '@/components/about.vue'
 
 import document from '@/components/document'
 import noFound from '@/components/404'
+
+import study from '@/view/study'
+import work from '@/view/work'
+import hobby from '@/view/hobby'
+
+
 let router = new VueRouter({
   mode: 'history',
   linkActiveClass:'is-active',
-  routes: [{
+  routes: [
+    {
+      path:'/',
+      component:home
+    },
+    {
       path: '/home',
       name:'Home', //取的name名字
       component: home,
@@ -18,7 +29,21 @@ let router = new VueRouter({
     {
       path: "/about",
       name:'About',
-      component: about
+      component: about,
+      children:[
+        {
+          path:'study',
+          component:study
+        },
+        {
+          path:'work',
+          component:work
+        },
+        {
+          path:'hobby',
+          component:hobby
+        }
+      ]
     },
     {
       path: "/document",
