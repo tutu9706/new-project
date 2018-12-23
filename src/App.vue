@@ -22,7 +22,7 @@
         </router-link>
 
         <router-link 
-          to="/document" 
+          to="/document#abc" 
           tag="li"
           active-class="activeClass" 
         >
