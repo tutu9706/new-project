@@ -2,10 +2,10 @@
   <div id="app">
     <div class="nav-box">
       <ul class="nav">
+        <!-- event="mouseover" 加在行间可以改变动作 -->
         <router-link 
           to="/" 
-          tag="li" 
-          event="mouseover"
+          tag="li"      
           exact
         >
           <i class="fa fa-home"></i>
@@ -28,6 +28,15 @@
         >
           <i></i>
           <span>document</span>
+        </router-link>
+
+        <router-link 
+          to="/user" 
+          tag="li"
+          active-class="activeClass" 
+        >
+          <i></i>
+          <span>user</span>
         </router-link>
       </ul>
     </div>
