@@ -107,7 +107,7 @@ let router = new VueRouter({
       path: "/document",
       name:'Document',
       beforeEnter(to,from,next){ //路由中设置钩子函数
-        console.log('beforeEnter');
+        // console.log('beforeEnter');
         next();
       },
       meta:{
